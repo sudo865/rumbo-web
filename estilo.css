@@ -1,0 +1,87 @@
+/* Rumbo — sitio publico. Sin dependencias externas: todo vive en este archivo.
+   Se sirve desde GitHub Pages, asi que no puede depender de ninguna CDN. */
+:root {
+  color-scheme: light dark;
+  --fondo: #ffffff;
+  --fondo-suave: #f6f7f6;
+  --texto: #18201c;
+  --texto-suave: #55605a;
+  --borde: #e2e6e3;
+  --acento: #047857;
+  --acento-texto: #ffffff;
+  --aviso-fondo: #fdf6e3;
+  --aviso-borde: #e8d9a8;
+  --medida: 34rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #0d1210;
+    --fondo-suave: #151d19;
+    --texto: #e8eeea;
+    --texto-suave: #9aa8a1;
+    --borde: #25322c;
+    --acento: #34d399;
+    --acento-texto: #06241a;
+    --aviso-fondo: #241f12;
+    --aviso-borde: #4a3f22;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding: 0 1.25rem 5rem;
+}
+.envoltura { max-width: var(--medida); margin: 0 auto; }
+header { padding: 3rem 0 2rem; border-bottom: 1px solid var(--borde); margin-bottom: 2.5rem; }
+.marca { display: flex; align-items: baseline; gap: .6rem; }
+.marca strong { font-size: 1.35rem; letter-spacing: -.02em; }
+.marca span { color: var(--texto-suave); font-size: .95rem; }
+h1 { font-size: 1.9rem; line-height: 1.2; letter-spacing: -.025em; margin: 1.6rem 0 .4rem; }
+h2 {
+  font-size: 1.15rem; letter-spacing: -.01em; margin: 2.75rem 0 .75rem;
+  padding-top: 1.5rem; border-top: 1px solid var(--borde);
+}
+h2:first-of-type { border-top: 0; padding-top: 0; }
+h3 { font-size: 1rem; margin: 1.5rem 0 .4rem; }
+p, li { color: var(--texto); }
+.sutil { color: var(--texto-suave); font-size: .92rem; }
+ul { padding-left: 1.15rem; }
+li { margin: .4rem 0; }
+a { color: var(--acento); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+code {
+  background: var(--fondo-suave); border: 1px solid var(--borde); border-radius: 4px;
+  padding: .1em .35em; font-size: .88em;
+}
+.tabla-envoltura { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; min-width: 30rem; }
+th, td { text-align: left; padding: .6rem .7rem; border-bottom: 1px solid var(--borde); vertical-align: top; }
+th { font-weight: 600; color: var(--texto-suave); font-size: .82rem; text-transform: uppercase; letter-spacing: .04em; }
+.aviso {
+  background: var(--aviso-fondo); border: 1px solid var(--aviso-borde);
+  border-radius: 10px; padding: 1rem 1.15rem; margin: 1.5rem 0;
+}
+.aviso p:first-child { margin-top: 0; }
+.aviso p:last-child { margin-bottom: 0; }
+.caja {
+  background: var(--fondo-suave); border: 1px solid var(--borde);
+  border-radius: 10px; padding: 1.15rem 1.25rem; margin: 1.5rem 0;
+}
+.pasos { counter-reset: paso; list-style: none; padding: 0; margin: 1.25rem 0; }
+.pasos li {
+  counter-increment: paso; position: relative; padding-left: 2.6rem; margin: 1rem 0;
+}
+.pasos li::before {
+  content: counter(paso); position: absolute; left: 0; top: .05rem;
+  width: 1.8rem; height: 1.8rem; border-radius: 50%;
+  background: var(--acento); color: var(--acento-texto);
+  display: grid; place-items: center; font-size: .9rem; font-weight: 600;
+}
+footer {
+  margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--borde);
+  color: var(--texto-suave); font-size: .88rem;
+}
+footer a { margin-right: 1.1rem; display: inline-block; }
