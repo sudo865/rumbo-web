@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Borrar tu cuenta de Rumbo</title>
-<meta name="description" content="Cómo borrar tu cuenta de Rumbo y todos tus datos, desde la app o solicitándolo aquí.">
+<title>Borrar tu cuenta de Nortly</title>
+<meta name="description" content="Cómo borrar tu cuenta de Nortly y todos tus datos, desde la app o solicitándolo aquí.">
 <link rel="canonical" href="https://sudo865.github.io/rumbo-web/borrar-cuenta.html">
 <link rel="stylesheet" href="estilo.css">
 </head>
@@ -12,18 +12,18 @@
 <div class="envoltura">
 
 <header>
-  <div class="marca"><strong>Rumbo</strong> <span>Ponle rumbo a tu plata</span></div>
+  <div class="marca"><strong>Nortly</strong> <span>Ponle rumbo a tu plata</span></div>
   <h1>Borrar tu cuenta y tus datos</h1>
-  <p class="sutil">Aplica a la app <strong>Rumbo</strong> (identificador <code>com.rumbo.app</code>)</p>
+  <p class="sutil">Aplica a la app <strong>Nortly</strong> (identificador <code>io.github.sudo865.finanzas</code>)</p>
 </header>
 
-<p>Puedes borrar tu cuenta y todo lo que guardamos de ti cuando quieras. El camino más rápido, y
-el que recomendamos, está dentro de la app: no pasa por nosotros, no hay formulario, no hay
-espera.</p>
+<p>Puedes borrar tu cuenta y todo lo que tiene cuando quieras; lo poco que no se va con ella, y por
+qué, está más abajo. El camino más rápido, y el que recomendamos, está dentro de la app: no pasa por
+nosotros, no hay formulario, no hay espera.</p>
 
 <h2>Desde la app — inmediato</h2>
 <ol class="pasos">
-  <li>Abre Rumbo y entra a <strong>Ajustes</strong>.</li>
+  <li>Abre Nortly y entra a <strong>Ajustes</strong>.</li>
   <li>Baja hasta <strong>Cuenta</strong>.</li>
   <li>Toca <strong>Borrar mi cuenta</strong> y confirma.</li>
 </ol>
@@ -33,12 +33,26 @@ diferido: cuando la app te confirma, ya no existe.</p>
 <h2>Qué se borra</h2>
 <p>Todo lo que está asociado a tu cuenta, en el servidor y en el teléfono:</p>
 <ul>
-  <li>Tus movimientos: montos, fechas, categorías, comercios y notas.</li>
-  <li>Tu perfil: moneda, presupuesto, ingreso mensual y preferencias.</li>
+  <li>Tus movimientos: montos, fechas, categorías, comercios y notas, también los que habías
+      eliminado y seguían marcados en el servidor.</li>
+  <li>Tu perfil: moneda, presupuesto, ingreso mensual, cómo te pagan, las fechas de pago que
+      corregiste y tus preferencias.</li>
   <li>Tus límites por categoría.</li>
+  <li>Tus pagos fijos y lo que apartaste.</li>
+  <li>Tus préstamos entre personas.</li>
   <li>Tus conversaciones con el coach.</li>
+  <li>Tus reportes de respuestas del coach.</li>
   <li>Las palabras que la app aprendió de tu forma de escribir para clasificar mejor.</li>
-  <li>Tus contadores de uso.</li>
+  <li>Tus contadores de uso y el registro de consumo de la inteligencia artificial.</li>
+  <li>Lo que solo vivía en tu teléfono: la lista de quién es quién detrás de cada código, las
+      preguntas por un monto, el tope hasta tu próximo pago, tus avisos (y los que estaban
+      programados), los comentarios que ya te mostró y la huella de lo que compartiste desde otra
+      app. El teléfono también olvida el número al azar de los datos de uso.</li>
+  <li>Tu aceptación de la política de privacidad: la fecha y la versión, en tu cuenta y en el
+      teléfono. Si vuelves a usar Nortly, la bienvenida te la pide de nuevo antes de crear una cuenta
+      nueva.</li>
+  <li>La dirección IP y el user-agent de la última vez que la app renovó tu sesión, que Auth, el
+      servicio de Supabase que te deja entrar, guarda junto a tu cuenta.</li>
   <li>La cuenta misma, incluido el correo si la habías vinculado.</li>
 </ul>
 
@@ -51,6 +65,15 @@ diferido: cuando la app te confirma, ya no existe.</p>
   <p>No contienen tus movimientos, ni tus montos, ni el texto de lo que registraste. Se eliminan
   solos cuando vence el período de retención de registros del proveedor. Te lo decimos porque
   prometer un borrado absoluto que no podemos cumplir sería mentirte.</p>
+  <p>Tampoco se borran los <strong>datos de uso</strong> que la app le mandó a PostHog: no están
+  ligados a tu cuenta, así que no podemos encontrarlos por ella. Al borrarla, el teléfono olvida el
+  número al azar que los acompañaba, y lo que se mande después ya no se puede unir con lo anterior.
+  PostHog los conserva según su plan, al menos un año. Borrar la cuenta tampoco los apaga: eso se
+  hace en <em>Ajustes → Privacidad → Datos de uso</em>.</p>
+  <p>Los <strong>correos</strong> no están en tu cuenta, así que no se borran con ella: las copias de los que
+  te mandamos con un código siguen en el buzón de Nortly en Gmail hasta que las borremos, porque hoy no
+  se borran solas; si nos escribes desde el correo al que te llegaron, borramos las que lo llevan. Los
+  que nos escribiste los guardamos lo necesario para demostrar que te atendimos.</p>
 </div>
 
 <h2>Si ya no tienes la app instalada</h2>
@@ -66,8 +89,8 @@ porque eso permitiría que cualquiera borrara los datos de otra persona.</p>
 
 <h3>Si nunca vinculaste un correo</h3>
 <div class="caja">
-  <p>Rumbo se puede usar completa sin dar ningún dato de contacto: al instalarla se crea una cuenta
-  anónima que no lleva tu nombre, ni tu correo, ni tu teléfono. Esa es una decisión de privacidad
+  <p>Nortly se puede usar completa sin dar ningún dato de contacto: al aceptar la política en la
+  bienvenida se crea una cuenta anónima que no lleva tu nombre, ni tu correo, ni tu teléfono. Esa es una decisión de privacidad
   deliberada, y tiene una consecuencia honesta:</p>
   <p><strong>Si no vinculaste un correo, no tenemos forma de saber cuál de las cuentas anónimas es
   la tuya</strong>, y no podemos borrarla a petición sin arriesgarnos a borrar la de otra
@@ -80,19 +103,36 @@ porque eso permitiría que cualquiera borrara los datos de otra persona.</p>
         teléfono: no se puede entrar a ella desde otro.</li>
     <li><strong>Si ya la desinstalaste</strong>, la sesión anónima se fue con ella: vivía en el
         almacenamiento privado de la app, no en tu correo ni en tu cuenta del teléfono. Volver a
-        instalar Rumbo crea una cuenta anónima <em>nueva</em>, no recupera la anterior. La copia en
+        instalar Nortly crea una cuenta anónima <em>nueva</em>, no recupera la anterior. La copia en
         la nube queda huérfana: sin esa sesión nadie —tú tampoco— puede volver a entrar a esos
         datos. <strong>Esa copia no se queda ahí para siempre</strong>: tras 12 meses sin
         actividad se borra sola, y la sección de abajo dice cómo.</li>
+    <li><strong>Si en ese teléfono entras con un correo</strong>, la app borra la cuenta anónima: lo
+        que había en el teléfono y su copia en la nube. Si en ese momento no logra borrar la copia de
+        la nube, te lo dice al entrar; esa copia queda sin sesión, nadie puede entrar a ella y se
+        borra sola tras 12 meses sin actividad, como explica la sección de abajo.</li>
   </ul>
-  <p>Si al reinstalar te encuentras con que tus movimientos siguen ahí, es que el sistema restauró
-  una copia de seguridad del teléfono. En ese caso sí tienes la cuenta de vuelta: bórrala desde
-  Ajustes y listo.</p>
   <p>No podemos borrar a petición una cuenta anónima a la que ya no puedes entrar: no hay ningún
   dato que la asocie contigo, y buscarla por lo que registraste nos obligaría a revisar los
   movimientos de otras personas, que es justo lo que no debemos hacer. Para eso existe el borrado
   automático de la sección siguiente.</p>
 </div>
+
+<h3>Si restauraste una copia de seguridad de tu iPhone</h3>
+<p>En iPhone, la copia de seguridad de iCloud o del computador incluye los datos que Nortly guarda en el
+teléfono, pero no la sesión de tu cuenta. Por eso, si restauraste una copia y ves tus movimientos de
+vuelta, <strong>la cuenta anterior no volvió con ellos</strong>: lo que ves es lo que traía la copia, y con
+conexión la app entra con una cuenta anónima nueva. En Android esto no pasa con la copia de seguridad de
+Google, porque Nortly le pide al sistema que no la incluya.</p>
+<ul>
+  <li><strong>Si la cuenta anterior tenía un correo vinculado</strong>, sigue siendo tuya: escríbenos desde
+      ese correo, como dice más arriba, y la borramos. La cuenta nueva la borras tú desde
+      <strong>Ajustes → Cuenta → Borrar mi cuenta</strong>.</li>
+  <li><strong>Si era anónima</strong>, <strong>Ajustes → Cuenta → Borrar mi cuenta</strong> borra la cuenta
+      nueva y lo que hay en el teléfono, pero no la anterior: esa quedó sin sesión, nadie puede entrar a ella y
+      no podemos saber cuál es, así que se borra sola tras 12 meses sin actividad, como explica la sección
+      siguiente.</li>
+</ul>
 
 <h2>Las cuentas anónimas se borran solas tras 12 meses sin actividad</h2>
 <div class="aviso">
@@ -100,12 +140,13 @@ porque eso permitiría que cualquiera borrara los datos de otra persona.</p>
   palabra sobre una cuenta que ya no puede revisar. Ese borrado <strong>ya está activo</strong>,
   desde el 22 de septiembre de 2026, y funciona así: una cuenta anónima que pasa
   <strong>12 meses</strong> seguidos sin actividad se borra sola, entera y de forma automática
-  —sus movimientos, su perfil, su presupuesto, sus límites, su hilo con el coach, las palabras
-  aprendidas, sus contadores y la cuenta misma—. No hay que pedirlo y no se puede deshacer.</p>
+  —sus movimientos, su perfil, su presupuesto, sus límites, sus pagos fijos y lo que apartó, sus
+  préstamos entre personas, su hilo con el coach, sus reportes de respuestas del coach, las palabras
+  aprendidas, sus contadores, su registro de consumo de la IA y la cuenta misma—. No hay que pedirlo y no se puede deshacer.</p>
   <p><strong>Nunca antes de los 12 meses.</strong> Ese plazo es un mínimo: el borrado lo ejecuta un
   proceso automático en el servidor, así que puede llegar algo después, pero no antes.</p>
   <p><strong>Cuenta como actividad abrir la app con conexión</strong>, no solo registrar algo. Si
-  usas Rumbo aunque sea para mirar, tu cuenta no se considera inactiva.</p>
+  usas Nortly aunque sea para mirar, tu cuenta no se considera inactiva.</p>
   <p><strong>A las cuentas vinculadas a un correo no les aplica.</strong> Esas se conservan mientras
   no las borres tú, aunque pases años sin abrir la app: con tu correo siempre puedes volver a
   entrar, y borrarlas por nuestra cuenta sería destruirle los datos a alguien que todavía puede
@@ -115,10 +156,14 @@ porque eso permitiría que cualquiera borrara los datos de otra persona.</p>
 </div>
 
 <h2>Desinstalar no es lo mismo que borrar</h2>
-<p>Al desinstalar Rumbo desaparece todo lo que había en tu teléfono, pero la copia en la nube
+<p>Al desinstalar Nortly desaparece todo lo que había en tu teléfono, pero la copia en la nube
 sigue existiendo: si tu cuenta estaba vinculada a un correo, hasta que la borres; si era anónima,
 hasta que se borre sola, tras 12 meses sin actividad. Para que no quede nada desde ya, usa
 <strong>Ajustes → Cuenta → Borrar mi cuenta</strong> <em>antes</em> de desinstalar.</p>
+<p>En iPhone hay una copia más, que no es nuestra: si tienes activada la copia de seguridad de iCloud o
+la del computador, lleva los datos que Nortly guardaba en el teléfono, y borrar tu cuenta o desinstalar
+Nortly no borra una copia que ya estaba hecha. Esa copia la manejas tú, en los ajustes de iCloud de tu
+iPhone o en tu computador; la <a href="privacidad.html">política de privacidad</a> (sección 2) lo explica.</p>
 
 <h2>Contacto</h2>
 <p><a href="mailto:Rumboapp05@gmail.com">Rumboapp05@gmail.com</a></p>

@@ -1,18 +1,19 @@
-# Rumbo — páginas públicas
+# Nortly — páginas públicas
 
-Rumbo es una app de finanzas personales para Latinoamérica: registras un gasto escribiéndolo o
-dictándolo como lo dirías en voz alta y un coach te dice qué hacer con tu plata, no solo dónde se
-fue. *Ponle rumbo a tu plata.*
+Nortly es una app de presupuesto personal para Latinoamérica: registras un gasto escribiéndolo o
+dictándolo como lo dirías en voz alta, y te dice cuánto puedes gastar hoy con tu
+presupuesto. *Ponle rumbo a tu plata.*
 
-Este repositorio contiene únicamente las páginas públicas de la app. Son cinco archivos
+Este repositorio contiene únicamente las páginas públicas de la app. Son seis archivos
 estáticos: sin dependencias, sin CDN, sin build.
 
 | Archivo | Qué es |
 |---|---|
 | `index.html` | Portada, con enlaces a las demás. |
-| `privacidad.html` | Política de privacidad: qué guarda Rumbo, qué sale de tu teléfono, hacia quién va, cuánto dura y cómo borrarlo todo. |
+| `privacidad.html` | Política de privacidad: qué guarda Nortly, qué sale de tu teléfono, hacia quién va, cuánto dura y cómo borrarlo todo. |
 | `borrar-cuenta.html` | Cómo borrar tu cuenta y tus datos, desde la app o solicitándolo, y qué pasa si ya la desinstalaste. |
 | `soporte.html` | Soporte: preguntas frecuentes y a dónde escribir. |
+| `terminos.html` | Términos de uso: qué es gratis para siempre y en qué condiciones se usa Nortly. |
 | `estilo.css` | Hoja de estilo compartida. Claro y oscuro. |
 
 ## Escribirnos
