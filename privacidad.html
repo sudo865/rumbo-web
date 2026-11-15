@@ -104,7 +104,8 @@ o modificarla.</p>
       <td>Pagos fijos y lo que apartas</td>
       <td>Si los agregas en Lo fijo o aceptas apartar</td>
       <td>Descontarlos de cuánto puedes gastar al día. Se guarda el tipo, el monto y el día; el apodo
-          que les pongas no sale de tu teléfono.</td>
+          que les pongas y, en una compra a cuotas, cuántas son y cuándo termina no salen de tu
+          teléfono.</td>
     </tr>
     <tr>
       <td>Préstamos entre personas</td>
@@ -182,6 +183,12 @@ o modificarla.</p>
       y la pregunta se borra sola al contestarla, al corregir el movimiento o al eliminarlo.</li>
   <li><strong>El tope hasta tu próximo pago</strong> que pones desde la tarjeta «Tu rumbo»: la
       categoría, el monto y hasta qué pago.</li>
+  <li><strong>Tu punto de partida en «Tu caja».</strong> Si eliges «Me entra cuando me entra» y nos
+      dices con cuánto arrancas, guardamos esa cifra, la fecha, tu meta de días y lo que apartas para
+      los días flojos. El teléfono suma y resta tus movimientos para decirte para cuántos días te
+      alcanza; nada de eso sale del teléfono.</li>
+  <li><strong>Tus compras a cuotas.</strong> Cuántas cuotas son, cuántas llevas y cuándo termina. A
+      tu cuenta solo llega el tipo de pago fijo, el monto de la cuota y el día.</li>
   <li><strong>Tus avisos.</strong> Cuáles encendiste, si muestran montos y cuándo se programó cada
       uno. Los calcula el teléfono: para mandarte un aviso no sale nada, no hay avisos enviados
       desde un servidor ni un identificador de notificaciones. El texto de cada aviso lo guarda el
@@ -260,6 +267,14 @@ escribes a mano se guarda tal cual, porque la IA no la lee. Si la app no reconoc
 cambiarlo por su código cambiaría el monto que leyó, sale tal cual, a la IA y a la nube. Y los
 números largos que parecen un celular, una cédula o una cuenta no se guardan en la descripción ni se
 le mandan a la IA, salvo cuando quitarlos cambiaría el monto.</p>
+<p>Lo mismo con los últimos dígitos de una tarjeta o de una cuenta. Si el banco o la billetera muestra
+un fragmento enmascarado con un rótulo reconocido (T.Deb, T.Cred, TC, Visa, Mastercard, Amex, cuenta,
+cta, ahorros, corriente, Nequi, Daviplata, Movii, Dale, Bancolombia, Davivienda, BBVA, Banco de Bogotá
+o Nu), con un conector como «terminada en 1234» o «termina en 1234» pegado al rótulo, o con «No»,
+«No.», «N°» o «#» delante de las cifras, lo reemplazamos por un marcador. No aplica a rótulos que no
+están en esa lista. Conservamos formas ambiguas como «tarjeta *1234 pesos», «TC ****1234 lucas»,
+«nequi 45000» o dos asteriscos sin rótulo junto a otro monto, como «almuerzo **1500 y taxi 8000»,
+para no cambiar la plata.</p>
 
 <h3>Deepgram — Estados Unidos</h3>
 <p>Si activas el dictado por voz, la grabación se envía a Deepgram únicamente para convertirla en
@@ -399,7 +414,7 @@ actividad (el final de esta sección lo explica).</p>
     <tr>
       <td><strong>Tus movimientos</strong></td>
       <td>Tu teléfono y la nube.</td>
-      <td>Mientras exista tu cuenta. Si eliminas uno desde Movimientos, desaparece de la app y de tu
+      <td>Mientras exista tu cuenta. Si eliminas uno desde Gastos, desaparece de la app y de tu
           copia en la nube, pero la fila sigue guardada en el servidor, marcada, con su monto, su
           comercio y su nota, hasta que se borra la cuenta entera. No te lo contamos como un detalle
           técnico: es la diferencia entre esconder y borrar, y está explicada entera en la fila
@@ -713,8 +728,9 @@ que no vas a encontrar. Ejercerlos es gratis.</p>
   <tbody>
     <tr>
       <td><strong>Acceso</strong><br><span class="sutil">saber qué tenemos tuyo</span></td>
-      <td>La mayor parte la ves dentro de la app, sin pedirle permiso a nadie: <em>Movimientos</em>
-          lista cada gasto y cada ingreso con su monto, su fecha y su categoría, y al tocar uno ves
+      <td>La mayor parte la ves dentro de la app, sin pedirle permiso a nadie: <em>Gastos</em>
+          lista cada gasto y cada ingreso del período que elijas —un día, una semana, un mes o un año—
+          con su monto, su fecha y su categoría, y al tocar uno ves
           también su descripción y su nota; el chat te muestra tus últimos 50 mensajes con el coach;
           <em>Ajustes</em> muestra tu moneda, tu presupuesto, tu ingreso, cómo te pagan, tus límites,
           si el dictado por voz está encendido y si tu cuenta está vinculada, con el correo casi todo
@@ -740,7 +756,7 @@ que no vas a encontrar. Ejercerlos es gratis.</p>
     <tr>
       <td><strong>Rectificación</strong><br><span class="sutil">corregir lo que está mal</span></td>
       <td>El monto, la descripción, la categoría, la fecha, el tipo (gasto o ingreso) y la nota
-          de un movimiento se corrigen tocándolo en <em>Movimientos</em> o en <em>Últimos
+          de un movimiento se corrigen tocándolo en <em>Gastos</em> o en <em>Últimos
           movimientos</em> del Inicio. La corrección reemplaza el dato también en tu copia en la
           nube. El presupuesto, el ingreso, cómo te pagan, los límites y la moneda se cambian en
           <em>Ajustes</em>; tus pagos fijos, en <em>Ajustes → Lo fijo</em>; tus préstamos, en
@@ -761,7 +777,7 @@ que no vas a encontrar. Ejercerlos es gratis.</p>
           qué no.
           <br><br>
           <strong>Un movimiento suelto es otra cosa, y preferimos decírtelo antes de que lo
-          uses:</strong> tócalo en <em>Movimientos</em> → <em>Eliminar movimiento</em> y deja de
+          uses:</strong> tócalo en <em>Gastos</em> → <em>Eliminar movimiento</em> y deja de
           aparecer en la app y en tu copia en la nube —no vuelve a salir en ninguna pantalla, ningún total lo
           suma y el coach deja de verlo—, pero <strong>la fila se queda en el servidor marcada como
           borrada</strong>, con su monto, su comercio y su nota. Esa marca es lo que hace que el
@@ -1006,6 +1022,14 @@ guardada. No aplicaremos retroactivamente un uso nuevo a datos ya recogidos sin 
       anónima no podemos entregárselos.</li>
   <li>Se precisa que el chat te muestra tus últimos 50 mensajes con el coach, no el hilo completo, y
       que de tus reportes al coach tu teléfono guarda también el motivo.</li>
+</ul>
+<p>El 14 de noviembre de 2026 añadimos tres precisiones a esta misma versión. No cambian lo que
+aceptaste: describen datos que se quedan solo en tu teléfono y una protección más antes de la IA.</p>
+<ul>
+  <li>Tu punto de partida en «Tu caja» se queda solo en tu teléfono.</li>
+  <li>De una compra a cuotas, cuántas son y cuándo termina se quedan solo en tu teléfono.</li>
+  <li>Los últimos dígitos de una tarjeta o de una cuenta se reemplazan por un marcador antes de
+      guardarse o de mandarse a la IA.</li>
 </ul>
 
 <h2>13. Contacto</h2>
